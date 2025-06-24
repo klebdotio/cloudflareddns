@@ -1,0 +1,20 @@
+cf_api_key: YOUR_CLOUDFLARE_API_KEY
+cf_email: your@email.com
+cf_zone: example.com
+
+cf_records:
+  - www:
+      type: A
+      ttl: 300
+      proxied: true
+  - '@':
+      type: A
+      ttl: 300
+      proxied: false
+
+
+# This is the method used to discover the server's IP address
+# The faster one is 'dig' but it may not be available on your system
+# Available methods: 'http' or 'dig'
+cf_resolving_method: http
+cf_logging_level: INFO
